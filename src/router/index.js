@@ -11,6 +11,12 @@ const router = createRouter({
       path: '/home',
       name: 'home',
       component: () => import('../views/home.vue')
+    },
+    // 404
+    {
+      path: '/:pathMatch(.*)*',
+      name: 'NotFound',
+      component: () => import('../views/error/404.vue')
     }
   ]
 })
