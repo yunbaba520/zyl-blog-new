@@ -23,9 +23,7 @@
             href="#"
             class="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent dark:text-violet-400 dark:border-violet-400"
           >
-            <font style="vertical-align: inherit">
-              <font style="vertical-align: inherit">关联</font>
-            </font>
+            首页
           </a>
         </li>
         <li class="flex">
@@ -34,9 +32,7 @@
             href="#"
             class="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent"
           >
-            <font style="vertical-align: inherit">
-              <font style="vertical-align: inherit">关联</font>
-            </font>
+            文章
           </a>
         </li>
         <li class="flex">
@@ -45,9 +41,7 @@
             href="#"
             class="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent"
           >
-            <font style="vertical-align: inherit">
-              <font style="vertical-align: inherit">关联</font>
-            </font>
+            项目
           </a>
         </li>
         <li class="flex">
@@ -56,24 +50,25 @@
             href="#"
             class="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent"
           >
-            <font style="vertical-align: inherit">
-              <font style="vertical-align: inherit">关联</font>
-            </font>
+            关于
+          </a>
+        </li>
+        <li class="flex">
+          <a
+            rel="noopener noreferrer"
+            href="#"
+            class="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent"
+          >
+            友情链接
           </a>
         </li>
       </ul>
       <div class="items-center flex-shrink-0 hidden lg:flex">
-        <button class="self-center px-8 py-3 rounded">
-          <font style="vertical-align: inherit">
-            <font style="vertical-align: inherit">登入</font>
-          </font>
-        </button>
+        <button class="self-center px-8 py-3 rounded">登录</button>
         <button
           class="self-center px-8 py-3 font-semibold rounded dark:bg-violet-400 dark:text-gray-900"
         >
-          <font style="vertical-align: inherit">
-            <font style="vertical-align: inherit">报名</font>
-          </font>
+          注册
         </button>
       </div>
       <button class="p-4 lg:hidden">
