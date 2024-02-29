@@ -18,7 +18,7 @@
       </a>
       <ul class="items-stretch hidden space-x-3 lg:flex">
         <li class="flex items-center" v-for="item in pages" :key="item.name">
-          <span class="px-4 cursor-pointer">{{ item.name }}</span>
+          <span class="px-4 cursor-pointer" @click="goPage(item)">{{ item.name }}</span>
         </li>
         <li class="flex items-center" @click="toggleDark()">
           <MySvg v-if="isDark" name="moon" twClass="w-6 h-6 fill-white"></MySvg>
@@ -50,15 +50,16 @@
 import { ref } from 'vue'
 import { useDark, useToggle } from '@vueuse/core'
 import MySvg from '../components/my-svg.vue'
-
+import { useRouter } from 'vue-router'
+const router = useRouter()
 const pages = ref([
   {
     name: '首页',
-    path: ''
+    path: '/home'
   },
   {
     name: '文章',
-    path: ''
+    path: '/article'
   },
   {
     name: '项目',
@@ -73,7 +74,10 @@ const pages = ref([
     path: ''
   }
 ])
-
+function goPage(item) {
+  console.log(item)
+  router.push(item.path)
+}
 // 会本地存储
 const isDark = useDark()
 const toggleDark = useToggle(isDark)

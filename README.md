@@ -8,8 +8,10 @@
 - vite
 - js
 - tailwindcss
+- axios
 - vueuse
 - vite-plugin-svg-icons: 对svg组件封装
+- @kangc/v-md-editor: 预览md文件
 
 # vscode插件
 
