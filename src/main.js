@@ -3,7 +3,8 @@ import { createPinia } from 'pinia'
 import './assets/css/style.css'
 import App from './App.vue'
 import router from './router'
-
+// icons
+import 'virtual:svg-icons-register'
 const app = createApp(App)
 
 app.use(createPinia())

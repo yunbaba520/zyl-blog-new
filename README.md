@@ -7,6 +7,13 @@
 - vue3
 - vite
 - js
+- tailwindcss
+- vueuse
+- vite-plugin-svg-icons: 对svg组件封装
+
+# vscode插件
+
+- tailwind css intellisense: 编写class时 类名提示 需要在前面加空格
 
 ## 使用
 

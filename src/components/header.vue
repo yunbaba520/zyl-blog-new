@@ -1,5 +1,5 @@
 <template>
-  <header class="p-4 dark:bg-gray-800 dark:text-gray-100">
+  <header class="p-4 bg-white text-gray-700 dark:bg-gray-800 dark:text-gray-100">
     <div class="container flex justify-between h-16 mx-auto">
       <a rel="noopener noreferrer" href="#" aria-label="返回首页" class="flex items-center p-2">
         <svg
@@ -17,15 +17,12 @@
         </svg>
       </a>
       <ul class="items-stretch hidden space-x-3 lg:flex">
-        <li class="flex" v-for="item in pages" :key="item.name">
-          <span class="flex items-center px-4">{{ item.name }}</span>
-          <!-- <a
-            rel="noopener noreferrer"
-            href="#"
-            class="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent dark:text-violet-400 dark:border-violet-400"
-          >
-            {{ item.name }}
-          </a> -->
+        <li class="flex items-center" v-for="item in pages" :key="item.name">
+          <span class="px-4 cursor-pointer">{{ item.name }}</span>
+        </li>
+        <li class="flex items-center" @click="toggleDark()">
+          <MySvg v-if="isDark" name="moon" twClass="w-6 h-6 fill-white"></MySvg>
+          <MySvg v-else name="sun" twClass="w-6 h-6 fill-black"></MySvg>
         </li>
       </ul>
 
@@ -51,6 +48,8 @@
 
 <script setup>
 import { ref } from 'vue'
+import { useDark, useToggle } from '@vueuse/core'
+import MySvg from '../components/my-svg.vue'
 
 const pages = ref([
   {
@@ -74,4 +73,8 @@ const pages = ref([
     path: ''
   }
 ])
+
+// 会本地存储
+const isDark = useDark()
+const toggleDark = useToggle(isDark)
 </script>
