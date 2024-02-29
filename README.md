@@ -1,34 +1,34 @@
-# zyl-blog
+# 项目介绍
 
-This template should help get you started developing with Vue 3 in Vite.
+个人博客
 
-## Recommended IDE Setup
+# 技术栈
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+- vue3
+- vite
+- js
 
-## Customize configuration
+## 使用
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
+安装依赖
 
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+运行项目
 
 ```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
+打包
 
 ```sh
 npm run build
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+格式校验
 
 ```sh
 npm run lint
