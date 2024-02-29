@@ -17,60 +17,18 @@
         </svg>
       </a>
       <ul class="items-stretch hidden space-x-3 lg:flex">
-        <li class="flex">
-          <a
+        <li class="flex" v-for="item in pages" :key="item.name">
+          <span class="flex items-center px-4">{{ item.name }}</span>
+          <!-- <a
             rel="noopener noreferrer"
             href="#"
             class="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent dark:text-violet-400 dark:border-violet-400"
           >
-            首页
-          </a>
-        </li>
-        <li class="flex">
-          <a
-            rel="noopener noreferrer"
-            href="#"
-            class="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent"
-          >
-            文章
-          </a>
-        </li>
-        <li class="flex">
-          <a
-            rel="noopener noreferrer"
-            href="#"
-            class="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent"
-          >
-            项目
-          </a>
-        </li>
-        <li class="flex">
-          <a
-            rel="noopener noreferrer"
-            href="#"
-            class="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent"
-          >
-            关于
-          </a>
-        </li>
-        <li class="flex">
-          <a
-            rel="noopener noreferrer"
-            href="#"
-            class="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent"
-          >
-            友情链接
-          </a>
+            {{ item.name }}
+          </a> -->
         </li>
       </ul>
-      <div class="items-center flex-shrink-0 hidden lg:flex">
-        <button class="self-center px-8 py-3 rounded">登录</button>
-        <button
-          class="self-center px-8 py-3 font-semibold rounded dark:bg-violet-400 dark:text-gray-900"
-        >
-          注册
-        </button>
-      </div>
+
       <button class="p-4 lg:hidden">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -90,3 +48,30 @@
     </div>
   </header>
 </template>
+
+<script setup>
+import { ref } from 'vue'
+
+const pages = ref([
+  {
+    name: '首页',
+    path: ''
+  },
+  {
+    name: '文章',
+    path: ''
+  },
+  {
+    name: '项目',
+    path: ''
+  },
+  {
+    name: '关于',
+    path: ''
+  },
+  {
+    name: '友情链接',
+    path: ''
+  }
+])
+</script>
