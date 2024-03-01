@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full h-full flex bg-gray-100 p-10">
+  <div class="w-full h-full flex p-10 bg-gray-100">
     <div class="w-80 relative">
       <ul class="sticky top-10">
         <li class="my-3" v-for="(values, key) in names" :key="key">

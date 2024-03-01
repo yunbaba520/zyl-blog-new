@@ -1,17 +1,21 @@
 <template>
   <div class="container mx-auto">
     <div class="mb-10" v-for="item in list" :key="item.type">
-      <div class="text-center text-xl font-bold py-4">{{ item.type }}</div>
+      <div class="text-center text-xl font-bold py-4 text-black dark:text-white">
+        {{ item.type }}
+      </div>
       <ul class="flex flex-wrap justify-center">
         <li
-          class="group flex items-center w-96 h-20 m-4 p-3 rounded-xl cursor-pointer hover:bg-gray-50"
+          class="group flex items-center w-96 h-20 m-4 p-3 rounded-xl cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-800"
           v-for="value in item.values"
           :key="value.name"
           @click="goLink(value.url)"
         >
           <img class="w-10 h-10 mr-3" :src="value.icon" alt="" />
-          <div class="text-gray-500">
-            <div class="text-lg group-hover:text-black">{{ value.name }}</div>
+          <div class="text-gray-500 dark:text-gray-300">
+            <div class="text-lg group-hover:text-black dark:group-hover:text-white">
+              {{ value.name }}
+            </div>
             <div class="text-sm line-clamp-2">{{ value.describe }}</div>
           </div>
         </li>
