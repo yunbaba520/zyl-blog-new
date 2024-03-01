@@ -23,12 +23,14 @@
 
 <script setup>
 import { ref } from 'vue'
-import names from '../utils/getMdFile'
+import names from '@/utils/getMdFile'
 import { requestGetMdFile } from '@/api/article/md'
+import useLoading from '@/hooks/useLoading'
+
 const textStr = ref('')
 function getFileDetail(key, name) {
   console.log(key, name)
-
+  useLoading.open()
   requestGetMdFile(key, name)
     .then((res) => {
       // console.log(res)
@@ -41,6 +43,9 @@ function getFileDetail(key, name) {
     })
     .catch((err) => {
       console.log('获取md文件失败', err)
+    })
+    .finally(() => {
+      useLoading.close()
     })
 }
 const firstKey = Object.keys(names)[0]
