@@ -71,7 +71,7 @@ const pages = ref([
   },
   {
     name: '友情链接',
-    path: ''
+    path: '/link'
   }
 ])
 function goPage(item) {

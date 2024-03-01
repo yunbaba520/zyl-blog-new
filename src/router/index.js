@@ -17,6 +17,11 @@ const router = createRouter({
       name: 'article',
       component: () => import('../views/article.vue')
     },
+    {
+      path: '/link',
+      name: 'link',
+      component: () => import('../views/link.vue')
+    },
     // 404
     {
       path: '/:pathMatch(.*)*',
