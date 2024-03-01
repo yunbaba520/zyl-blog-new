@@ -1,5 +1,5 @@
 <template>
-  <div class="w-screen h-screen flex flex-col justify-between">
+  <div class="w-full h-screen flex flex-col justify-between">
     <Header></Header>
     <div class="flex-1">
       <RouterView></RouterView>

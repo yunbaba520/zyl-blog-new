@@ -1,7 +1,7 @@
 import { mdRequest } from '../index'
 
-export const requestGetMdFile = (name) => {
+export const requestGetMdFile = (key, name) => {
   return mdRequest.get({
-    url: `./md/${name}.md`
+    url: `./md/${key}/${name}.md`
   })
 }

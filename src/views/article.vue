@@ -1,8 +1,18 @@
 <template>
-  <div class="flex">
-    <div>
-      <ul>
-        <li v-for="name in names" :key="name" @click="getFileDetail(name)">{{ name }}</li>
+  <div class="w-full h-full flex bg-gray-100 p-10">
+    <div class="w-80 relative">
+      <ul class="sticky top-10">
+        <li class="my-3" v-for="(values, key) in names" :key="key">
+          <div class="text-lg font-bold">{{ key }}</div>
+          <div
+            class="my-1 mx-2 cursor-pointer"
+            v-for="name in values"
+            :key="name"
+            @click="getFileDetail(key, name)"
+          >
+            {{ name }}
+          </div>
+        </li>
       </ul>
     </div>
     <div class="flex-1">
@@ -16,16 +26,23 @@ import { ref } from 'vue'
 import names from '../utils/getMdFile'
 import { requestGetMdFile } from '@/api/article/md'
 const textStr = ref('')
-function getFileDetail(name) {
-  console.log(name)
+function getFileDetail(key, name) {
+  console.log(key, name)
 
-  requestGetMdFile(name)
+  requestGetMdFile(key, name)
     .then((res) => {
-      console.log(res)
+      // console.log(res)
       textStr.value = res
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+      })
     })
     .catch((err) => {
-      console.log(err)
+      console.log('获取md文件失败', err)
     })
 }
+const firstKey = Object.keys(names)[0]
+getFileDetail(firstKey, names[firstKey][0])
 </script>
