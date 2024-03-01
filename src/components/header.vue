@@ -67,7 +67,7 @@ const pages = ref([
   },
   {
     name: '关于',
-    path: ''
+    path: '/about'
   },
   {
     name: '友情链接',
