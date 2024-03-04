@@ -26,10 +26,10 @@
         </li>
         <li class="flex items-center">
           <span v-if="locale === 'en'" @click="changeLang('zh')" class="w-16 cursor-pointer"
-            >Chinese</span
+            >zh</span
           >
           <span v-if="locale === 'zh'" @click="changeLang('en')" class="w-16 cursor-pointer"
-            >英</span
+            >en</span
           >
         </li>
       </ul>
