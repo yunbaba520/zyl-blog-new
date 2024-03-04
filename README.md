@@ -12,6 +12,7 @@
 - vueuse
 - vite-plugin-svg-icons: 对svg组件封装
 - @kangc/v-md-editor: 预览md文件
+- vue-i18n@next: 多语言
 
 # vscode插件
 

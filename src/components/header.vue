@@ -24,6 +24,14 @@
           <MySvg v-if="isDark" name="moon" twClass="w-6 h-6 fill-white"></MySvg>
           <MySvg v-else name="sun" twClass="w-6 h-6 fill-black"></MySvg>
         </li>
+        <li class="flex items-center">
+          <span v-if="locale === 'en'" @click="changeLang('zh')" class="w-16 cursor-pointer"
+            >Chinese</span
+          >
+          <span v-if="locale === 'zh'" @click="changeLang('en')" class="w-16 cursor-pointer"
+            >英</span
+          >
+        </li>
       </ul>
 
       <button class="p-4 lg:hidden">
@@ -47,30 +55,33 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
+import { useI18n } from 'vue-i18n'
+const { t, locale } = useI18n()
 import { useDark, useToggle } from '@vueuse/core'
 import MySvg from '../components/my-svg.vue'
 import { useRouter } from 'vue-router'
 const router = useRouter()
+
 const pages = ref([
   {
-    name: '首页',
+    name: computed(() => t('header.home')),
     path: '/home'
   },
   {
-    name: '文章',
+    name: computed(() => t('header.article')),
     path: '/article'
   },
   {
-    name: '项目',
+    name: computed(() => t('header.project')),
     path: ''
   },
   {
-    name: '关于',
+    name: computed(() => t('header.about')),
     path: '/about'
   },
   {
-    name: '友情链接',
+    name: computed(() => t('header.link')),
     path: '/link'
   }
 ])
@@ -81,4 +92,9 @@ function goPage(item) {
 // 会本地存储
 const isDark = useDark()
 const toggleDark = useToggle(isDark)
+
+function changeLang(lang) {
+  locale.value = lang
+  console.log(locale)
+}
 </script>
