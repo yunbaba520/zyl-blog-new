@@ -9,12 +9,12 @@
             </font>
           </span>
           <font style="vertical-align: inherit">
-            <font style="vertical-align: inherit">404</font>
+            <font style="vertical-align: inherit">403</font>
           </font>
         </h2>
         <p class="text-2xl font-semibold md:text-3xl">
           <font style="vertical-align: inherit">
-            <font style="vertical-align: inherit">抱歉，我们找不到此页面。</font>
+            <font style="vertical-align: inherit">抱歉，你没有访问权限。</font>
           </font>
         </p>
         <p class="mt-4 mb-8 dark:text-gray-400">
