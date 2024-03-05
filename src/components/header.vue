@@ -74,7 +74,7 @@ const pages = ref([
   },
   {
     name: computed(() => t('header.project')),
-    path: ''
+    path: '/project'
   },
   {
     name: computed(() => t('header.about')),
