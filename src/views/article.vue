@@ -1,11 +1,11 @@
 <template>
-  <div class="w-full h-full flex p-10 bg-gray-100">
+  <div class="w-full h-full flex p-10">
     <div class="w-80 relative">
       <ul class="sticky top-10">
         <li class="my-3" v-for="(values, key) in names" :key="key">
-          <div class="text-lg font-bold">{{ key }}</div>
+          <div class="text-lg font-bold dark:text-gray-200">{{ key }}</div>
           <div
-            class="my-1 mx-2 cursor-pointer"
+            class="my-1 mx-2 cursor-pointer dark:text-gray-300"
             v-for="name in values"
             :key="name"
             @click="getFileDetail(key, name)"
@@ -15,7 +15,7 @@
         </li>
       </ul>
     </div>
-    <div class="flex-1">
+    <div class="flex-1 bg-gray-100 dark:bg-gray-400">
       <v-md-preview :text="textStr"></v-md-preview>
     </div>
   </div>
