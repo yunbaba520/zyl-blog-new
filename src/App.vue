@@ -11,4 +11,12 @@
 <script setup>
 import Header from '@/components/header.vue'
 import Footer from '@/components/footer.vue'
+// change current title
+import { useTitle } from '@vueuse/core'
+const title = useTitle()
+title.value = 'zyl blog'
+// change current icon
+import { useFavicon } from '@vueuse/core'
+const icon = useFavicon()
+icon.value = './src/assets/svg/logo.svg'
 </script>
